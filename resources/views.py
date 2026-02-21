@@ -75,3 +75,4 @@ class CommentViewSet(viewsets.ModelViewSet):
             resource_id=self.kwargs["resource_pk"],
         )
 
+

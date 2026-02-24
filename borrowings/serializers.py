@@ -12,3 +12,4 @@ class BorrowRequestSerializer(serializers.ModelSerializer):
         fields = ["id", "resource", "requester", "status", "created_at"]
         read_only_fields = ["id", "resource", "requester", "status", "created_at"]
 
+

@@ -100,7 +100,7 @@ Headers:
 
 4. **Obtain token using DRF's built-in view**
 
-If you already have a user and just want a token (similar to the Week 3 `api_project`):
+If you already have a user and just want a token, use DRF's built-in endpoint below:
 
 `POST /api/token/`
 
@@ -190,9 +190,48 @@ Returned fields:
 - `status`
 - `created_at`
 
+## Profile and feed
+
+- `GET /api/profile/` – get current user's profile (bio, created_at, updated_at).
+- `PATCH /api/profile/` – update your profile (e.g. bio).
+- `POST /api/follow/<user_id>/` – follow a user.
+- `DELETE /api/unfollow/<user_id>/` – unfollow a user.
+- `GET /api/feed/` – paginated list of resources from users you follow. Optional: `?is_available=true|false`.
+
+## Comments on resources
+
+- `GET /api/resources/<id>/comments/` – list comments (paginated).
+- `POST /api/resources/<id>/comments/` – add a comment (body: `{"content": "..."}`).
+- `GET/PUT/PATCH/DELETE /api/resources/<id>/comments/<comment_id>/` – retrieve, update, or delete a comment (only author can update/delete).
+
+## Likes on resources
+
+- `POST /api/resources/<id>/like/` – like a resource (idempotent).
+- `POST /api/resources/<id>/unlike/` – remove your like.
+- Resource list/detail responses include `like_count` and `liked_by_me`.
+
 ## Running tests
 
 ```bash
 python manage.py test
 ```
+
+## Deployment
+
+For production, set these environment variables:
+
+- `DJANGO_SECRET_KEY` – a long random secret (do not use the default).
+- `DJANGO_DEBUG=False`
+- `DJANGO_ALLOWED_HOSTS` – space-separated list of allowed hosts (e.g. `yourdomain.com` or `your-app.pythonanywhere.com`).
+
+Optional: for a production database, set `DATABASE_URL` and use `django-environ` or configure `DATABASES` in settings (e.g. PostgreSQL on PythonAnywhere, Heroku, or DigitalOcean).
+
+Steps:
+
+1. Install dependencies: `pip install -r requirements.txt`
+2. Run migrations: `python manage.py migrate`
+3. Collect static files: `python manage.py collectstatic --noinput`
+4. Run with Gunicorn: `gunicorn neighborhood_exchange.wsgi --bind 0.0.0.0:8000`
+
+Static files are served via WhiteNoise when `DEBUG=False`. For high traffic, you can use a CDN or reverse proxy (e.g. Nginx) in front of Gunicorn. See [PythonAnywhere](https://www.pythonanywhere.com/), [Heroku](https://www.heroku.com/), or [DigitalOcean](https://www.digitalocean.com/) for hosting a Django app.
 

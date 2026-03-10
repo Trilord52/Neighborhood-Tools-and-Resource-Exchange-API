@@ -1,0 +1,638 @@
+{
+	"id": "cc8c0813-af33-4427-81e6-21c81cbfbe3d",
+	"name": "Neighborhood Tools API - Full",
+	"timestamp": "2026-03-01T17:57:04.194Z",
+	"collection_id": "45763193-69c40f45-0d36-4795-afa5-1817404c3512",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-03-01T17:56:57.667Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "b65c81af-2f00-4f71-b917-ce99538e0425",
+			"name": "Register",
+			"url": "http://127.0.0.1:8000/api/register/",
+			"time": 8,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e3a92aad-47a0-4602-b8e7-1d075c34eaf4",
+			"name": "Login (get token)",
+			"url": "http://127.0.0.1:8000/api/login/",
+			"time": 1131,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				1131
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2776dbe4-e854-4dd6-b52a-a55b81e2d71b",
+			"name": "Obtain token (DRF built-in)",
+			"url": "http://127.0.0.1:8000/api/token/",
+			"time": 1135,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				1135
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4d4dc1b9-3e81-4ed0-956b-d2aef048b9c4",
+			"name": "Get current user",
+			"url": "http://127.0.0.1:8000/api/me/",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6a7feed3-b90e-48b7-bbf0-f4e16d2ba89c",
+			"name": "List categories",
+			"url": "http://127.0.0.1:8000/api/categories/",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2f4ad4d9-0648-4dd7-a573-66c78cf31ccf",
+			"name": "Create category",
+			"url": "http://127.0.0.1:8000/api/categories/",
+			"time": 11,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				11
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1e9a4050-d2ee-4184-a22f-0db769187488",
+			"name": "Retrieve category",
+			"url": "http://127.0.0.1:8000/api/categories/1/",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0bd87032-54b8-4709-92cc-d4fa046ba907",
+			"name": "Update category (PUT)",
+			"url": "http://127.0.0.1:8000/api/categories/1/",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5c2b8ac2-1bab-4601-9338-7131f3537bb6",
+			"name": "Delete category",
+			"url": "http://127.0.0.1:8000/api/categories/1/",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "02e04961-d7c1-49e7-9868-5d7e0f8cf373",
+			"name": "List resources",
+			"url": "http://127.0.0.1:8000/api/resources/",
+			"time": 7,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a9d58c75-f55e-41a9-aa1d-25a26e016d55",
+			"name": "Create resource",
+			"url": "http://127.0.0.1:8000/api/resources/",
+			"time": 8,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8212e98a-ec1b-4108-85f0-ca0ab4249b39",
+			"name": "Retrieve resource",
+			"url": "http://127.0.0.1:8000/api/resources/1/",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6ad82457-bfb5-4e96-86f7-b11e3bd08540",
+			"name": "Update resource (PATCH)",
+			"url": "http://127.0.0.1:8000/api/resources/1/",
+			"time": 14,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				14
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8c47afea-186e-4b77-b68b-5e05ed7a58b9",
+			"name": "Delete resource",
+			"url": "http://127.0.0.1:8000/api/resources/1/",
+			"time": 11,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				11
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "39e3a1d6-5343-489e-91ee-0ef322efc649",
+			"name": "List comments for resource",
+			"url": "http://127.0.0.1:8000/api/resources/1/comments/",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cb40d347-bdc8-40fe-85d6-33aa4b1e212a",
+			"name": "Add comment to resource",
+			"url": "http://127.0.0.1:8000/api/resources/1/comments/",
+			"time": 89,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				89
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fc212c2a-e727-4a62-9425-391975692a50",
+			"name": "Like resource",
+			"url": "http://127.0.0.1:8000/api/resources/1/like/",
+			"time": 7,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "078a65a8-a3e9-4899-854f-1b6e7e47133c",
+			"name": "Unlike resource",
+			"url": "http://127.0.0.1:8000/api/resources/1/unlike/",
+			"time": 11,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				11
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "172e08fc-7bb3-4286-a5e7-738c4472a42b",
+			"name": "List borrow requests",
+			"url": "http://127.0.0.1:8000/api/borrow-requests/",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e666edbe-44d0-46e6-ab8f-500a61d38bbb",
+			"name": "Create borrow request",
+			"url": "http://127.0.0.1:8000/api/borrow-requests/",
+			"time": 8,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c87788c5-a5e4-426d-8edd-5d6239fb5a48",
+			"name": "Approve request",
+			"url": "http://127.0.0.1:8000/api/borrow-requests/1/approve/",
+			"time": 8,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b0355653-e3a1-4007-8407-1c19423bf3c8",
+			"name": "Reject request",
+			"url": "http://127.0.0.1:8000/api/borrow-requests/1/reject/",
+			"time": 9,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c32c310a-8a0c-4d9e-842b-686de2adcb17",
+			"name": "Mark returned",
+			"url": "http://127.0.0.1:8000/api/borrow-requests/1/return/",
+			"time": 9,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "866e21d5-ad90-4a05-9322-b2c25a3d0d7e",
+			"name": "Get profile",
+			"url": "http://127.0.0.1:8000/api/profile/",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "81699b90-73ed-4060-8512-4920ea94d3e9",
+			"name": "Update profile (PATCH)",
+			"url": "http://127.0.0.1:8000/api/profile/",
+			"time": 161,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				161
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "115ea238-7f0e-452a-8071-c2461025df8d",
+			"name": "Follow user",
+			"url": "http://127.0.0.1:8000/api/follow/2/",
+			"time": 29,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				29
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8e0d99bc-a1f9-4b38-a913-cbaf56be3eae",
+			"name": "Unfollow user",
+			"url": "http://127.0.0.1:8000/api/unfollow/2/",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "090c738a-4d46-466d-b42d-6ad39ff3f65a",
+			"name": "Get feed",
+			"url": "http://127.0.0.1:8000/api/feed/",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2729,
+	"collection": {
+		"requests": [
+			{
+				"id": "b65c81af-2f00-4f71-b917-ce99538e0425",
+				"method": "POST"
+			},
+			{
+				"id": "e3a92aad-47a0-4602-b8e7-1d075c34eaf4",
+				"method": "POST"
+			},
+			{
+				"id": "2776dbe4-e854-4dd6-b52a-a55b81e2d71b",
+				"method": "POST"
+			},
+			{
+				"id": "4d4dc1b9-3e81-4ed0-956b-d2aef048b9c4",
+				"method": "GET"
+			},
+			{
+				"id": "6a7feed3-b90e-48b7-bbf0-f4e16d2ba89c",
+				"method": "GET"
+			},
+			{
+				"id": "2f4ad4d9-0648-4dd7-a573-66c78cf31ccf",
+				"method": "POST"
+			},
+			{
+				"id": "1e9a4050-d2ee-4184-a22f-0db769187488",
+				"method": "GET"
+			},
+			{
+				"id": "0bd87032-54b8-4709-92cc-d4fa046ba907",
+				"method": "PUT"
+			},
+			{
+				"id": "5c2b8ac2-1bab-4601-9338-7131f3537bb6",
+				"method": "DELETE"
+			},
+			{
+				"id": "02e04961-d7c1-49e7-9868-5d7e0f8cf373",
+				"method": "GET"
+			},
+			{
+				"id": "a9d58c75-f55e-41a9-aa1d-25a26e016d55",
+				"method": "POST"
+			},
+			{
+				"id": "8212e98a-ec1b-4108-85f0-ca0ab4249b39",
+				"method": "GET"
+			},
+			{
+				"id": "6ad82457-bfb5-4e96-86f7-b11e3bd08540",
+				"method": "PATCH"
+			},
+			{
+				"id": "8c47afea-186e-4b77-b68b-5e05ed7a58b9",
+				"method": "DELETE"
+			},
+			{
+				"id": "39e3a1d6-5343-489e-91ee-0ef322efc649",
+				"method": "GET"
+			},
+			{
+				"id": "cb40d347-bdc8-40fe-85d6-33aa4b1e212a",
+				"method": "POST"
+			},
+			{
+				"id": "fc212c2a-e727-4a62-9425-391975692a50",
+				"method": "POST"
+			},
+			{
+				"id": "078a65a8-a3e9-4899-854f-1b6e7e47133c",
+				"method": "POST"
+			},
+			{
+				"id": "172e08fc-7bb3-4286-a5e7-738c4472a42b",
+				"method": "GET"
+			},
+			{
+				"id": "e666edbe-44d0-46e6-ab8f-500a61d38bbb",
+				"method": "POST"
+			},
+			{
+				"id": "c87788c5-a5e4-426d-8edd-5d6239fb5a48",
+				"method": "PUT"
+			},
+			{
+				"id": "b0355653-e3a1-4007-8407-1c19423bf3c8",
+				"method": "PUT"
+			},
+			{
+				"id": "c32c310a-8a0c-4d9e-842b-686de2adcb17",
+				"method": "PUT"
+			},
+			{
+				"id": "866e21d5-ad90-4a05-9322-b2c25a3d0d7e",
+				"method": "GET"
+			},
+			{
+				"id": "81699b90-73ed-4060-8512-4920ea94d3e9",
+				"method": "PATCH"
+			},
+			{
+				"id": "115ea238-7f0e-452a-8071-c2461025df8d",
+				"method": "POST"
+			},
+			{
+				"id": "8e0d99bc-a1f9-4b38-a913-cbaf56be3eae",
+				"method": "DELETE"
+			},
+			{
+				"id": "090c738a-4d46-466d-b42d-6ad39ff3f65a",
+				"method": "GET"
+			}
+		]
+	}
+}

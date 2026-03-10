@@ -145,6 +145,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
@@ -159,3 +160,14 @@ if not DEBUG:
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_HSTS_PRELOAD = True
     SECURE_SSL_REDIRECT = True
+
+
+# Parse database configuration from $DATABASE_URL when provided (e.g. on Render, Heroku)
+if os.environ.get("DATABASE_URL"):
+    try:
+        import dj_database_url
+
+        DATABASES["default"] = dj_database_url.parse(os.environ.get("DATABASE_URL"), conn_max_age=600)
+    except Exception:
+        # If dj_database_url is not installed or parsing fails, keep default sqlite
+        pass
